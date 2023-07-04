@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './global.css'
+import './CSSDefinitions/App.css';
 
-function App() {
+import { connect } from 'react-redux';
+import { RootState } from './types';
+import * as actions from './Redux/actions'
+import TitleBar from './Components/TitleBar';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import ProjectsPage from './Pages/ProjectsPage';
+import AboutPage from './Pages/AboutPage';
+import Footer from './Components/Footer';
+import backgroundImage from './Resources/background3.png'
+
+interface IProps {
+  title: string,
+  setTitle: (title: string) => void
+}
+
+const App = (props: IProps) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Routes>
+            <Route path="/" element={<LayoutsWithNavbar {...props}/>}>
+            <Route path="/" element={<HomePage {...props}/>}/>
+            <Route path="/projects" element={<ProjectsPage {...props}/>}/>
+            <Route path="/about" element={<AboutPage {...props}/>}/>
+            </Route>
+        </Routes>
+
+        <Footer />
     </div>
   );
 }
 
-export default App;
+const LayoutsWithNavbar = (props: any) => {
+  return (
+    <>
+        <TitleBar title={props.title}/>
+        <div style={{position:"relative", width:"auto", height:"auto", backgroundImage: `url(${backgroundImage})`, backgroundColor: "white"}}>
+            <div className='Dark-Primary' style={{width: "65%", margin: "auto", minWidth: 350, display:"flex", flexDirection:"column", alignContent: "center"}}>
+                <Outlet />
+            </div>
+        </div>
+    </>
+  );
+}
+
+let ConnectedApp = connect((state: RootState) => ({ title: state.titleState.title }), actions)((args: IProps) => <App {...args} />)
+
+export default ConnectedApp;

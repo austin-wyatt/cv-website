@@ -1,0 +1,27 @@
+.Title-Bar
+{
+    font-size: 36px;
+    display: flex; 
+    width: auto; 
+    margin: 6px;
+    padding: 5px; 
+    align-items: center;
+}
+
+.Burger-Menu
+{
+    margin: 6px;
+    margin-left: 3px;
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.Sticky-Title-Bar
+{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}

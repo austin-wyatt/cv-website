@@ -1,0 +1,36 @@
+.App 
+{
+  text-align: center;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  min-height: 100vh;
+}
+
+.Top-bar
+{
+  height: 70px;
+  max-height: 70px;
+  min-height: 70px;
+  width: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  z-index: 10;
+}
+
+.App-Footer
+{
+  height: 125px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.Hide-Overflow
+{
+  /* overflow: hidden; */
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+}
