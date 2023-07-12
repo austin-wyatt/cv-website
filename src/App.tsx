@@ -13,37 +13,37 @@ import Footer from './Components/Footer';
 import backgroundImage from './Resources/background3.png'
 
 interface IProps {
-  title: string,
-  setTitle: (title: string) => void
+    title: string,
+    setTitle: (title: string) => void
 }
 
 const App = (props: IProps) => {
-  return (
-    <div>
-        <Routes>
-            <Route path="/" element={<LayoutsWithNavbar {...props}/>}>
-            <Route path="/" element={<HomePage {...props}/>}/>
-            <Route path="/projects" element={<ProjectsPage {...props}/>}/>
-            <Route path="/about" element={<AboutPage {...props}/>}/>
-            </Route>
-        </Routes>
+    return (
+        <div>
+            <Routes>
+                <Route path="/" element={<LayoutsWithNavbar {...props} />}>
+                    <Route path="/" element={<HomePage {...props} />} />
+                    <Route path="/projects" element={<ProjectsPage {...props} />} />
+                    <Route path="/about" element={<AboutPage {...props} />} />
+                </Route>
+            </Routes>
 
-        <Footer />
-    </div>
-  );
+            <Footer />
+        </div>
+    );
 }
 
 const LayoutsWithNavbar = (props: any) => {
-  return (
-    <>
-        <TitleBar title={props.title}/>
-        <div style={{position:"relative", width:"auto", height:"auto", backgroundImage: `url(${backgroundImage})`, backgroundColor: "white"}}>
-            <div className='Dark-Primary' style={{width: "65%", margin: "auto", minWidth: 350, display:"flex", flexDirection:"column", alignContent: "center"}}>
-                <Outlet />
+    return (
+        <>
+            <TitleBar title={props.title} />
+            <div style={{ position: "relative", width: "auto", height: "auto", backgroundImage: `url(${backgroundImage})`, backgroundColor: "white" }}>
+                <div className='Dark-Primary' style={{ width: "65%", margin: "auto", minWidth: 350, display: "flex", flexDirection: "column", alignContent: "center" }}>
+                    <Outlet />
+                </div>
             </div>
-        </div>
-    </>
-  );
+        </>
+    );
 }
 
 let ConnectedApp = connect((state: RootState) => ({ title: state.titleState.title }), actions)((args: IProps) => <App {...args} />)

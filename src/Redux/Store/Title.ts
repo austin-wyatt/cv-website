@@ -1,7 +1,7 @@
 import { TitleState, Action } from "../../types";
 
 const initialState: TitleState = {
-    title: "default title"    
+    title: ""    
 };
 
 export const SET_TITLE = "SET_TITLE";

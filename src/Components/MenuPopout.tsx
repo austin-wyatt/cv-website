@@ -46,19 +46,19 @@ const MenuPopout = (props: IProps) => {
         <div className={"Dark-secondary Menu-Popout " + fadeClassName} onClick={() => {}}>
             <div className='Menu-List'>
                 <div className='Menu-Header'>
-                    Menu header
+                    Pages
                 </div>
                 {
                     menuOptions.map((item) => 
                     (
-                        <>
+                        <div key={item.title}>
                         {item.current = item.path == location.pathname}
-                        <Link to={item.path} style={{textDecoration: "inherit", color: "inherit", pointerEvents: closingMenu ? "none" : "inherit"}} key={item.title} onClick={(e) => closeMenu(!item.current)}>
+                        <Link to={item.path} style={{textDecoration: "inherit", color: "inherit", pointerEvents: closingMenu ? "none" : "inherit"}} onClick={(e) => closeMenu(!item.current)}>
                             <div className={'Menu-List-Item ' + (item.current ? "Menu-List-Item-Selected" : "")}>
                                 {item.title}
                             </div>
                         </Link>
-                        </>
+                        </div>
                     ))
                 }
             </div>

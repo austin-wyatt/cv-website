@@ -1,7 +1,9 @@
 import burgerMenu from "../Resources/burger-menu.svg"
+import homeButton from "../Resources/home-button.svg"
 import "../CSSDefinitions/TitleBar.css"
 import { useEffect, useState } from "react";
 import MenuPopout from "./MenuPopout";
+import { useNavigate } from "react-router-dom";
 
 interface IProps
 {
@@ -10,6 +12,8 @@ interface IProps
 
 function TitleBar(props: IProps){
     const [menuToggled, setMenuToggled] = useState(false)
+
+    const navigate = useNavigate();
 
     const toggleMenu = (shouldBeOpen: boolean, navigated: boolean = false) => {
         setMenuToggled(shouldBeOpen);
@@ -44,6 +48,7 @@ function TitleBar(props: IProps){
                             <MenuPopout setMenuState={toggleMenu}/>
                         ) : null
                     }
+                    <img src={homeButton} alt="home" className="Home-Button" onClick={() => {navigate("/")}}/>
                     <img src={burgerMenu} alt="burger menu" className="Burger-Menu" onClick={() => toggleMenu(!menuToggled)}/>
                     <div>
                         {props.title}

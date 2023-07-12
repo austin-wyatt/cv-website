@@ -18,10 +18,20 @@
     cursor: pointer;
 }
 
+.Home-Button
+{
+    margin: 6px;
+    margin-left: 3px;
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
 .Sticky-Title-Bar
 {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
 }
