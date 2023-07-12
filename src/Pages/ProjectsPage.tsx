@@ -408,7 +408,7 @@ const ProjectsPage = (props: IProps) => {
                 A React.js single page application hosted statically from an AWS S3 bucket.
 
                 <br/><br/>
-                <a style={{color:"#80A375"}} href="https://github.com/austin-wyatt/Webserver_CMake">GitHub Link</a> <br/>
+                <a style={{color:"#80A375"}} href="https://github.com/austin-wyatt/cv-website">GitHub Link</a> <br/>
 
                 <br/>
                 <h2>About</h2>
