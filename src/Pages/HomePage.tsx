@@ -98,17 +98,25 @@ const HomePage = (props: IProps) => {
 
     return (
         <div className="App Dark-primary">
-            <div style={{ height: 25 }} />
+            <div style={{...headerStyle, width: "100%"}}>
+                <h1 style={{margin: "auto"}}>Austin Johnston</h1>
+            </div>
+            
             <h1 style={headerStyle}>
                 About
             </h1>
             <div style={textBoxStyle}>
-                TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test
+                I am an experienced software developer proficient in .NET Core, .NET Framework, C++, C, React, TypeScript, SQL, Python, 
+                application development, cross platform development, and web development. With 2 years professional experience as well as 2 years dedicated project experience, 
+                I have developed custom software solutions, web applications, and cross-platform applications. I prioritize clear communication, 
+                timely delivery, and a commitment to excellence.
             </div>
 
-            <h1 style={headerStyle}>
-                Notable Projects
-            </h1>
+            <a href="/projects" style={{color: "inherit", textDecoration: "none"}}>
+                <h1 style={headerStyle}>
+                    Notable Projects
+                </h1>
+            </a>
             <div style={{ ...textBoxStyle, display: "flex", flexWrap: "wrap" }}>
                 {projectList.map((item) => (
                     <div style={{ minWidth: 125, minHeight: 150, textAlign: "center", margin: "0px 20px 10px 0px" }} key={item.title}>
@@ -120,8 +128,18 @@ const HomePage = (props: IProps) => {
             <h1 style={headerStyle}>
                 Work Experience
             </h1>
-            <div style={textBoxStyle}>
-                TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test TEST test
+            <div style={{...textBoxStyle, lineHeight: 1}}>
+                <h2>Reynolds and Reynolds</h2>
+                <h3>Software Developer</h3>
+                Aug 2019 - Aug 2021 
+                
+                <br/><br/>
+
+                <h2>Freelancing</h2>
+                <h3>Software Developer</h3>
+                Oct 2022 - Current
+
+                <br/><br/><br/>
             </div>
 
             <h1 style={headerStyle}>

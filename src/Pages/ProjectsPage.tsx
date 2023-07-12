@@ -190,12 +190,11 @@ const ProjectsPage = (props: IProps) => {
                 <img alt="texture atlas" src={textureAtlasImage} style={{width: "90%", height: "auto", margin: "auto"}} loading="lazy"/>
 
                 <h3>In-engine scripting using Microsoft ClearScript</h3>
-                insert video here
+                <iframe style={{width: macroEmbedSize.width, height: macroEmbedSize.height}} src="https://www.youtube.com/embed/i0aMHZpdsfE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                 <h3>Combat showcase</h3>
-                insert video here
+                <iframe style={{width: macroEmbedSize.width, height: macroEmbedSize.height}} src="https://www.youtube.com/embed/SaeUeEF3ppY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
-
             {/* KERNEL DRIVER */}
             <h1 id="driver+" style={{marginTop: 50}}>
                 Windows Kernel Driver
@@ -391,7 +390,7 @@ const ProjectsPage = (props: IProps) => {
                         mostly finished once integration with the crypto++ library is implemented (at some point)
                     </li>
                     <li>
-                        Supports static website and file hosting. Only files within the server's designated folder can be accessed by the webserver.
+                        Supports static website and file hosting. Only files within the server's designated folder can be accessed by the webserver
                     </li>
                     <li>
                         Supports chunked file transfers, transfer compression, and also has handling to only compress files that can be compressed (ie 
@@ -405,7 +404,7 @@ const ProjectsPage = (props: IProps) => {
                 This Website
             </h1>
             <div style={{...textStyle, marginTop: 25}}>
-                A React.js single page application hosted statically from an AWS S3 bucket.
+                A React.js single page application hosted statically from an AWS S3 bucket
 
                 <br/><br/>
                 <a style={{color:"#80A375"}} href="https://github.com/austin-wyatt/cv-website">GitHub Link</a> <br/>
