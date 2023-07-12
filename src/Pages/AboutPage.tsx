@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import copyIcon from "../Resources/copy-icon.svg"
 import '../CSSDefinitions/AboutPage.css'
+import { Link } from 'react-router-dom';
 
 interface IProps {
     setTitle: (title: string) => void
@@ -103,7 +104,7 @@ const AboutPage = (props: IProps) => {
                                 Supports playing audio from a YouTube video link or a local audio/video file
                             </li>
                             <li>
-                                <a href="/projects?proj=musicbot" style={{color:"inherit"}}>Link to project entry</a>
+                                <Link to="/projects?proj=musicbot" style={{color:"inherit"}}>Link to project entry</Link>
                             </li>
                         </ul>
                     </li>

@@ -8,6 +8,7 @@ import keyboardImage from '../Resources/keyboard-preview.png'
 import websiteImage from '../Resources/cv-website-preview.png'
 import webserverImage from '../Resources/webserver-preview.png'
 import fileTransferImage from '../Resources/file-transfer-preview.png'
+import { Link } from 'react-router-dom';
 
 interface IProps {
     setTitle: (title: string) => void
@@ -102,9 +103,11 @@ const HomePage = (props: IProps) => {
                 <h1 style={{margin: "auto"}}>Austin Johnston</h1>
             </div>
             
-            <h1 style={headerStyle}>
-                About
-            </h1>
+            <Link to="/about" style={{color: "inherit", textDecoration: "none"}}>
+                <h1 style={headerStyle}>
+                    About
+                </h1>
+            </Link>
             <div style={textBoxStyle}>
                 I am an experienced software developer proficient in .NET Core, .NET Framework, C++, C, React, TypeScript, SQL, Python, 
                 application development, cross platform development, and web development. With 2 years professional experience as well as 2 years dedicated project experience, 
@@ -112,11 +115,11 @@ const HomePage = (props: IProps) => {
                 timely delivery, and a commitment to excellence.
             </div>
 
-            <a href="/projects" style={{color: "inherit", textDecoration: "none"}}>
+            <Link to="/projects" style={{color: "inherit", textDecoration: "none"}}>
                 <h1 style={headerStyle}>
                     Notable Projects
                 </h1>
-            </a>
+            </Link>
             <div style={{ ...textBoxStyle, display: "flex", flexWrap: "wrap" }}>
                 {projectList.map((item) => (
                     <div style={{ minWidth: 125, minHeight: 150, textAlign: "center", margin: "0px 20px 10px 0px" }} key={item.title}>
