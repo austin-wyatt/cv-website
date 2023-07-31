@@ -9,6 +9,7 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import ProjectsPage from './Pages/ProjectsPage';
 import AboutPage from './Pages/AboutPage';
+import MiscPage from './Pages/MiscPage';
 import Footer from './Components/Footer';
 import backgroundImage from './Resources/background3.png'
 
@@ -25,6 +26,7 @@ const App = (props: IProps) => {
                     <Route path="/" element={<HomePage {...props} />} />
                     <Route path="/projects" element={<ProjectsPage {...props} />} />
                     <Route path="/about" element={<AboutPage {...props} />} />
+                    <Route path="/misc" element={<MiscPage {...props} />} />
                 </Route>
             </Routes>
 

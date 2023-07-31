@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import { Provider } from 'react-redux';
 import store from './Redux/store'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom';
-import { hydrate, render } from "react-dom";
+import { hydrate } from "react-dom";
 
 
 // const root = ReactDOM.createRoot(
@@ -38,6 +38,7 @@ if(rootElement?.hasChildNodes()){
     hydrate(appJSX, rootElement)
 }
 else{
-    render(appJSX, rootElement)
+    const root = createRoot(rootElement!);
+    root.render(appJSX)
 }
 

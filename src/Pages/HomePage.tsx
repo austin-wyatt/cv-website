@@ -155,6 +155,8 @@ const HomePage = (props: IProps) => {
                     <img src={copyIcon} alt="copy to clipboard" title="Copy to clipboard" onClick={() => { navigator.clipboard.writeText("V9LXGYFC0JF1QX3F") }} style={copyIconStyle} />
                 </div>
             </div>
+
+            <Link to="/misc"></Link>
         </div>
     );
 }

@@ -22,6 +22,11 @@ const menuOptions = [
     path: "/about",
     current: false
 },
+{
+    title: "Miscellaneous",
+    path: "/misc",
+    current: false
+},
 ]
 
 const MenuPopout = (props: IProps) => {
