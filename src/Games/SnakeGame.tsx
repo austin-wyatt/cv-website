@@ -72,7 +72,7 @@ class SnakeClass{
     lastKeypress: number = 0;
     keyPressListener = (e: KeyboardEvent) => {
         let delta = Date.now() - this.lastKeypress;
-        let bufferDelta = 100
+        let bufferDelta = 1000 / this.framesPerMove
 
         switch(e.key){
             case "Escape":
@@ -247,7 +247,7 @@ class SnakeClass{
 
     drawEndText(){
         this.context.font = "30px proxima-nova sans-serif";
-        this.context.fillStyle = "black"
+        this.context.fillStyle = "red"
         this.context.textAlign = "center"
         this.context.fillText("Game Over", this.width / 2, 50);
 
