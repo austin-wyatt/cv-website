@@ -277,8 +277,8 @@ class SnakeClass{
         advanceX = this.snakeHead.x + advanceX;
         advanceY = this.snakeHead.y + advanceY;
 
-        let cellsX = this.width / this.cellDimensions;
-        let cellsY = this.height / this.cellDimensions;
+        let cellsX = this.width / this.cellDimensions - 1;
+        let cellsY = this.height / this.cellDimensions - 1;
 
         let cellString = advanceX + "," + advanceY;
 
@@ -462,8 +462,8 @@ class SnakeClass{
 
     generateFood(){
         let cells = {
-            x: this.width / this.cellDimensions,
-            y: this.height / this.cellDimensions
+            x: this.width / this.cellDimensions - 1,
+            y: this.height / this.cellDimensions - 1
         }
 
         const maxTries = 50;
